@@ -24,3 +24,5 @@ preds = model.predict(x)
 
 # Decode and display predictions
 print('Predicted:', decode_predictions(preds, top=3)[0])
+
+#Predicted: [('n04254680', 'soccer_ball', 0.99946004), ('n03793489', 'mouse', 0.00015638306), ('n04540053', 'volleyball', 8.9596644e-05)]
