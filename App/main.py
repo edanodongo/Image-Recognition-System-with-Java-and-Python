@@ -8,7 +8,7 @@ import preprocess_input, decode_predictions
 
 model = ResNet50(weights='imagenet')
 
-img_path = 'football.jpg' # The image to classify
+img_path = 'C:/Users/Edan/Downloads/image.jpeg' # The image to classify
 #image = cv2.imread('path/to/your/image.jpg')
 img = cv2.imread(img_path)
 
