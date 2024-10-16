@@ -16,3 +16,9 @@ pythonCopy codeimg = cv2.resize(img, (224, 224))  # Resize the image to match th
 x = image.img_to_array(img)  # Convert the image to a numpy array
 x = np.expand_dims(x, axis=0)  # Add a batch dimension
 x = preprocess_input(x)
+
+# Make predictions
+preds = model.predict(x)
+
+# Decode and display predictions
+print('Predicted:', decode_predictions(preds, top=3)[0])
