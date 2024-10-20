@@ -35,9 +35,23 @@ public class ImageRecognition {
         ImageRecognition recognizer = new ImageRecognition("C:\\Users\\Edan\\OneDrive\\Documents\\GitHub\\Image-Recognition-System-with-Java-and-Python\\cifar10_model.keras");
         float[] testImage = new float[32 * 32 * 3]; // Example test image
         float[] prediction = recognizer.predict(testImage);
-
         for (int i = 0; i < prediction.length; i++) {
             System.out.println("Class " + i + ": " + prediction[i]);
         }
     }
+
+    public class Main {
+        public static void main(String[] args) {
+            ImagePreprocessor preprocessor = new ImagePreprocessor();
+            ImageRecognition recognizer = new ImageRecognition("path/to/cifar10_model");
+    
+            float[] inputImage = preprocessor.preprocessImage("path/to/test_image.jpg");
+            float[] prediction = recognizer.predict(inputImage);
+    
+            for (int i = 0; i < prediction.length; i++) {
+                System.out.println("Class " + i + ": " + prediction[i]);
+            }
+        }
+    }
 }
+
