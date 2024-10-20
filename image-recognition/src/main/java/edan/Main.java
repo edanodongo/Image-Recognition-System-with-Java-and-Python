@@ -5,7 +5,7 @@ public class Main {
         ImagePreprocessor preprocessor = new ImagePreprocessor();
         ImageRecognition recognizer = new ImageRecognition("path/to/cifar10_model");
 
-        float[] inputImage = preprocessor.preprocessImage("path/to/test_image.jpg");
+        float[] inputImage = preprocessor.preprocessImage("C:/Users/Edan/Downloads/image.jpeg");
         float[] prediction = recognizer.predict(inputImage);
 
         for (int i = 0; i < prediction.length; i++) {
