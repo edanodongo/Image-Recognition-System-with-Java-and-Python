@@ -1,3 +1,5 @@
+package edan;
+
 import org.tensorflow.SavedModelBundle;
 import org.tensorflow.Tensor;
 
@@ -5,6 +7,7 @@ import java.nio.FloatBuffer;
 import java.nio.file.Paths;
 
 public class ImageRecognition {
+    
     private SavedModelBundle model;
 
     public ImageRecognition(String modelPath) {
@@ -26,7 +29,10 @@ public class ImageRecognition {
     }
 
     public static void main(String[] args) {
-        ImageRecognition recognizer = new ImageRecognition("path/to/cifar10_model");
+        //Display hello world
+        System.out.println( "Hello World!" );
+
+        ImageRecognition recognizer = new ImageRecognition("C:\\Users\\Edan\\OneDrive\\Documents\\GitHub\\Image-Recognition-System-with-Java-and-Python\\cifar10_model.h5");
         float[] testImage = new float[32 * 32 * 3]; // Example test image
         float[] prediction = recognizer.predict(testImage);
 
