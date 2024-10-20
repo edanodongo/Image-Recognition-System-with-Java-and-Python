@@ -32,7 +32,7 @@ public class ImageRecognition {
         //Display hello world
         System.out.println( "Hello World!" );
 
-        ImageRecognition recognizer = new ImageRecognition("C:\\Users\\Edan\\OneDrive\\Documents\\GitHub\\Image-Recognition-System-with-Java-and-Python\\cifar10_model.h5");
+        ImageRecognition recognizer = new ImageRecognition("C:\\Users\\Edan\\OneDrive\\Documents\\GitHub\\Image-Recognition-System-with-Java-and-Python\\cifar10_model.keras");
         float[] testImage = new float[32 * 32 * 3]; // Example test image
         float[] prediction = recognizer.predict(testImage);
 

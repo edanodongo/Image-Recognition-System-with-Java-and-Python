@@ -46,4 +46,4 @@ model = Sequential([
 ])
 
 #Saving the model
-model.save('Image-Recognition-System-with-Java-and-Python\cifar10_model.h5')
+model.save('Image-Recognition-System-with-Java-and-Python\cifar10_model.keras')
