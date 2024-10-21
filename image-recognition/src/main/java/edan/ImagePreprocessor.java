@@ -1,5 +1,8 @@
 package edan;
 
+//import org.opencv.core.*;
+import org.opencv.core.Size;
+import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
@@ -10,7 +13,7 @@ public class ImagePreprocessor {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
     }
 
-    public static float[] preprocessImage(String imagePath) {
+    public float[] preprocessImage(String imagePath) {
         Mat image = Imgcodecs.imread(imagePath);
         Imgproc.resize(image, image, new Size(32, 32));
         image.convertTo(image, CvType.CV_32F);
